@@ -58,6 +58,7 @@
 
   --ff-playfair-display: 'Playfair Display', serif;
   --ff-roboto: 'Roboto', sans-serif;
+  --ff-nunito: 'Nunito Sans', sans-serif;
 
   --fs-1: 3rem;
   --fs-2: 2.4rem;
@@ -198,7 +199,12 @@ body {
 
 .btn ion-icon { font-size: 1.6rem; }
 
-.btn-primary:is(:hover, :focus) { --bg-color: var(--green-pigment); }
+.btn-primary{
+  font-family: var(--ff-nunito) ;
+}
+.btn-primary:is(:hover, :focus) { 
+  font-family: var(--ff-nunito) ;
+  --bg-color: var(--green-pigment); }
 
 .section { padding-block: var(--section-padding); }
 
@@ -206,6 +212,7 @@ body {
   font-size: var(--fs-1);
   font-weight: var(--fw-500);
   color: var(--russian-violet);
+  font-family: var(--ff-nunito);
 }
 
 .h3 {
@@ -355,6 +362,7 @@ blockquote {
 .product-card .rating-wrapper { margin-block-end: 10px; }
 
 .product-card .card-title {
+  font-family: var(--ff-nunito);
   color: var(--russian-violet);
   font-size: var(--fs-4);
   font-weight: var(--fw-500);
@@ -382,7 +390,9 @@ blockquote {
   --padding: 12px 18px;
 }
 
-
+.card-subtitle {
+  font-family: var(--ff-nunito);
+}
 
 
 
@@ -562,6 +572,7 @@ blockquote {
   font-weight: var(--fw-700);
   padding: 17px;
   border-radius: var(--radius-4);
+  font-family: var(--ff-playfair-display);
 }
 
 .navbar-link:is(:hover, :focus) { background-color: var(--white_10); }
@@ -725,6 +736,7 @@ blockquote {
 .social-link:is(:hover, :focus) { color: var(--emerald); }
 
 .footer-list-title {
+  font-family: 'Playfair Display', serif;
   color: var(--green-pigment);
   font-size: var(--fs-2);
   font-weight: var(--fw-700);
@@ -1064,6 +1076,7 @@ blockquote {
   .navbar-list {
     display: flex;
     gap: 10px;
+    font-family: var(--ff-playfair-display);
   }
 
   .header-action-btn { padding: 15px; }
