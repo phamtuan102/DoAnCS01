@@ -199,6 +199,7 @@ body {
 
 .btn ion-icon { font-size: 1.6rem; }
 
+
 .btn-primary{
   font-family: var(--ff-nunito) ;
 }
@@ -240,7 +241,7 @@ body {
 .has-scrollbar:hover::-webkit-scrollbar-thumb { background-color: var(--black_25); }
 
 .section-subtitle {
-  color: var(--emerald);
+  color: rgb(86, 9, 238);
   font-family: var(--ff-playfair-display);
   font-size: var(--fs-3);
   font-style: italic;
@@ -271,6 +272,8 @@ blockquote {
   font-style: italic;
   text-align: justify;
 }
+
+.uudai {color: rgb(43, 9, 238)}
 
 
  
