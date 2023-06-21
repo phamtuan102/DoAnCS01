@@ -154,7 +154,9 @@ function Telelienhe() {
 
 
 
-
+function redirectToPage(){
+  window.location.href= "dangnhap.html";
+}
 
 
 
