@@ -1,45 +1,32 @@
-function redirectToPage(){
-    window.location.href= "dangnhap.html";
-}
-document.getElementById("registerForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission
-  
-    // Get the input values
-    const fullName = document.getElementById("fullName").value;
-    const birthdate = document.getElementById("birthdate").value;
-    const email = document.getElementById("email").value;
-    const phoneNumber = document.getElementById("phoneNumber").value;
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
-    const agreeTerms = document.getElementById("agreeTerms").checked;
-  
-    // Perform form validation
-    if (!fullName || !birthdate || !email || !phoneNumber || !password || !confirmPassword || !agreeTerms) {
-      alert("Vui lòng điền đầy đủ thông tin.");
-      return;
-    }
-  
-    if (password !== confirmPassword) {
-      alert("Mật khẩu và Xác nhận mật khẩu không khớp.");
-      return;
-    }
-  
-    // Simulate registration process
-    // In this example, we are logging the data to the console
-    console.log("Họ và tên:", fullName);
-    console.log("Ngày sinh:", birthdate);
-    console.log("Email:", email);
-    console.log("Số điện thoại:", phoneNumber);
-    console.log("Mật khẩu:", password);
-  
-    // Reset the form fields
-    document.getElementById("registerForm").reset();
-  
-    alert("Đăng ký thành công!");
-    // Redirect to the login page or another desired page
-    window.location.href = "dangnhap.html";
+const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container");
+
+sign_up_btn.addEventListener("click", () => {
+  container.classList.add("sign-up-mode");
 });
-function login(){
-    window.location.href= "index.html";
-}
-  
+
+sign_in_btn.addEventListener("click", () => {
+  container.classList.remove("sign-up-mode");
+});
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Lắng nghe sự kiện submit của form đăng nhập
+    document.querySelector(".sign-in-form").addEventListener("submit", function (event) {
+      event.preventDefault(); // Ngăn chặn form submit mặc định
+
+      // Lấy giá trị tài khoản và mật khẩu từ các input
+      var username = document.querySelector(".sign-in-form input[type='text']").value;
+      var password = document.querySelector(".sign-in-form input[type='password']").value;
+
+      // Kiểm tra thông tin đăng nhập
+      if (username === "admin" && password === "12345") {
+        // Chuyển đến trang index
+        window.location.href = "index.html";
+      } else {
+        alert("Thông tin đăng nhập không chính xác");
+      }
+    });
+  });
+
